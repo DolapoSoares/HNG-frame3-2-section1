@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            position: absolute;
+            left: 47.1%;
+            top:15%;
+            text-align: center;
+            font-family: sans-serif;
+            transform: translate(-40%, -30%);
+            margin: 20px;
+        }
+        .heading{
+            display: flex;
+            position: absolute;
+            left: 42.26%;
+            top: 2.43%;
+            bottom: 97.08%;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 27px;
+            color: #8898aa;
+            
+           }
+        .info{
+            
+            font-family: sans-serif;
+            font-size: 40px;
+            margin: 0px;
+            display:inline-block;
+            
+        }
+        .count{
+            display: flex;
+            border: 2px solid;
+            border-radius :50%;
+            text-align: center;
+            margin: 0px;
+            display:inline-block;
+            padding: 10px;
+        }
+        .countd{
+            display:inline-block;
+        }
+        .Register{
+            display:flex;
+            position:absolute;
+            left: 42%;
+            top: 30%;
+            padding: 7px;
+            font-family: Open Sans;
+            font-size: 20px;
+            color: #00aeff;
+
+        }
+        p{
+            font-size: 20px;
+        }
+        .introduction{
+            width: 40%;
+            margin: 20%;
+        }
+        .introduction p1{
+            text-align: center;
+            
+        }
+        img{
+            float: right;
+            width: 40%;
+            top: 20%;
+            height: 415px;
+        }
+        .introduction h2{
+            
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 54px;
+
+            color: #084482;
+
+        }
+        
+    </style>
+</head>
+<body>
+        <img src="images/Rectangle 5.1.png">
+    <div class="heading"><h3>Countdown to HNG 7.0</h3></div>
+
+    <div class="container">
+
+                <div class="info">
+                    <div class="countd"><span id="days" class="count">45</span><p>Days</p></div>
+                    <div class="countd"><span id="hrs" class="count">15</span><p>Hours</p></div>
+                    <div class="countd"><span id="min" class="count">30</span><p>Minutes</p></div>
+                    <div class="countd"><span id="sec" class="count">24</span><p>Seconds</div>
+                </div>
+    </div>
+    <div class="Register">
+        <a href="#" target="_blank">REGISTER FOR HNG 7.0 NOW</a>
+    </div>
+    <div>
+        <div class="introduction">
+
+        <h2>HNG 6.0 Internship</h2>
+
+        
+            <p1>The HNG 6.0 Internship commenced 23rd April, 2019 and ended 58th October, 2020.</p1>
+            <p1>
+             A well-planned, coordinated event where young talented folks from across the globe
+              participated remotely and were involved in learning key skills needed to becoming 
+              the best globally in programming, design thinking, machine learning and digital marketing.
+            </p1>
+            <p1>
+              The HNG 6.0 Internship programme comprised of 10 stages. Tasks were given to participants and 
+              deadlines for submission was set. Those who were late in submitting tasks and also those who didn’t 
+              follow instructions to complete task as required were eliminated at every stage of the event.
+            </p1>
+            <p1>
+              The programme was directed by Mark Essien, (founder-CEO hotels.ng) and some of the participants
+               from the previous HNG Internship edition were brought on board as Mentors, their job was to guide
+                and inspire participatants when needed and also to properly coordinate the event.
+            </p1>
+        
+        </div>
+        
+    </div>
+    
+    <script type="text/javascript">
+    function countDown(){
+    var currentDate = new Date().getTime();
+    var eventDate = new Date("Nov 19, 2019 15:37:25").getTime();
+
+    var remTime = eventDate - currentDate;
+
+    var s = Math.floor(remTime/1000);
+    var m = Math.floor(s/60);
+    var h = Math.floor(m/60);
+    var d = Math.floor(h/24);
+
+    h %= 24;
+    m %= 60;
+    s %= 60;
+
+    h = (h < 10) ? "0" + h: h;
+    m = (m < 10) ? "0" + m: m;
+    s = (s < 10) ? "0" + s: s;
+
+    document.getElementById('days').textContent = d;
+    document.getElementById('days').innerText = d;
+
+    document.getElementById('hrs').textContent = h;
+    document.getElementById('min').textContent = m;
+    document.getElementById('sec').textContent = s;
+
+    setInterval(countDown, 1000);
+    }
+
+    countDown();
+    </script>
+</body>
+</html>
